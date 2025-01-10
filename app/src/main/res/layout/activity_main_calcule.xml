@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <!-- Bouton pour revenir à MainActivity en haut à gauche -->
+    <Button
+        android:id="@+id/backToMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quitter"
+        android:layout_gravity="start|top"
+        android:padding="8dp"
+        android:layout_margin="16dp" />
+
+    <!-- Conteneur central pour les autres éléments -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Chronomètre -->
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temps restant : 10 s"
+            android:textColor="#03DAC5"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:textStyle="bold" />
+
+        <!-- Équation -->
+        <TextView
+            android:id="@+id/equationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 + 4 = ?"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+
+        <!-- Choix des réponses -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option 1"
+                android:layout_margin="8dp" />
+
+            <Button
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option 2"
+                android:layout_margin="8dp" />
+
+            <Button
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Option 3"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
