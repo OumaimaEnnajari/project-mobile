@@ -46,7 +46,7 @@
             android:textStyle="italic"
             android:textColor="@color/black"
             android:gravity="center"
-            android:text="Great job! You're a pro!" />
+            android:text="Ressayer le jeu" />
     </LinearLayout>
 
     <!-- Restart Button -->

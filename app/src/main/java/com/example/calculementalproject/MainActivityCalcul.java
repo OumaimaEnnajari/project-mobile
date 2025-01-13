@@ -111,8 +111,8 @@ public class MainActivityCalcul extends AppCompatActivity {
 
     private void generateEquation() {
         Random random = new Random();
-        int num1 = getRandomNumber(random);
-        int num2 = getRandomNumber(random);
+        Integer num1 = (Integer) getRandomNumber(random);
+        Integer num2 = (Integer) getRandomNumber(random);
 
         String[] operations = {"+", "-", "*", "/"};
         String operation = operations[random.nextInt(operations.length)];
@@ -133,12 +133,16 @@ public class MainActivityCalcul extends AppCompatActivity {
         }
     }
 
-    private int calculateResult(int num1, int num2, String operation) {
+    private int calculateResult(Integer num1, Integer num2, String operation) {
         switch (operation) {
             case "+": return num1 + num2;
             case "-": return num1 - num2;
             case "*": return num1 * num2;
-            case "/": return num2 != 0 ? num1 / num2 : 1; // Avoid division by zero
+            case "/": {
+                Random random = new Random();
+                num2 = (Integer) getRandomNumber(random)+1;
+                return  num1 / num2; // Avoid division by zero
+            }
             default: return 0;
         }
     }
